@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Green Investments</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
@@ -33,40 +32,42 @@
     }
 
     img{
-      max-width:100%;
+      width:100%;
       display:block;
     }
 
     .container{
       width:90%;
-      max-width:1280px;
+      max-width:1400px;
       margin:auto;
     }
 
-    /* NAVIGATION */
+    /* HEADER */
 
     header{
       position:fixed;
-      width:100%;
       top:0;
-      left:0;
+      width:100%;
       z-index:1000;
-      background:rgba(5,15,10,0.75);
-      backdrop-filter:blur(12px);
+      background:rgba(5,15,10,0.78);
+      backdrop-filter:blur(10px);
       border-bottom:1px solid rgba(255,255,255,0.05);
     }
 
     .navbar{
-      height:90px;
       display:flex;
-      align-items:center;
       justify-content:space-between;
+      align-items:center;
+      height:90px;
     }
 
     .logo{
       font-size:20px;
       font-weight:800;
       letter-spacing:2px;
+    }
+
+    .logo span{
       color:#7CFF9E;
     }
 
@@ -77,7 +78,7 @@
     }
 
     .nav-links a{
-      color:#dce6df;
+      color:#e2e8e4;
       font-size:15px;
       transition:0.3s;
     }
@@ -101,7 +102,6 @@
       position:relative;
       display:flex;
       align-items:center;
-      overflow:hidden;
     }
 
     .hero::before{
@@ -109,10 +109,10 @@
       position:absolute;
       inset:0;
       background:
-        linear-gradient(to right,
-        rgba(5,10,8,0.92) 30%,
-        rgba(5,10,8,0.35)),
-        url('hero.jpg') center/cover no-repeat;
+      linear-gradient(to right,
+      rgba(0,0,0,0.82) 35%,
+      rgba(0,0,0,0.2)),
+      url('hero.jpg') center/cover no-repeat;
       z-index:-1;
     }
 
@@ -124,33 +124,30 @@
     .subtitle{
       color:#7CFF9E;
       letter-spacing:3px;
-      font-size:14px;
-      margin-bottom:28px;
       text-transform:uppercase;
+      font-size:14px;
+      margin-bottom:24px;
     }
 
     .hero h1{
-      font-size:82px;
+      font-size:86px;
       line-height:0.95;
-      margin-bottom:35px;
+      margin-bottom:30px;
       font-weight:800;
     }
 
     .hero p{
-      color:#d7ddd9;
+      color:#dce3df;
       font-size:22px;
       line-height:1.8;
+      margin-bottom:40px;
       max-width:700px;
-      margin-bottom:45px;
     }
 
-    .hero-buttons{
-      display:flex;
-      gap:20px;
-      flex-wrap:wrap;
-    }
-
-    .btn-primary{
+    .hero-btn{
+      display:inline-flex;
+      align-items:center;
+      gap:12px;
       background:#7CFF9E;
       color:#07110d;
       padding:18px 34px;
@@ -159,41 +156,34 @@
       transition:0.3s;
     }
 
-    .btn-primary:hover{
+    .hero-btn:hover{
       transform:translateY(-3px);
     }
 
-    .btn-secondary{
-      border:1px solid rgba(255,255,255,0.2);
-      padding:18px 34px;
-      border-radius:40px;
-      color:white;
-    }
-
-    /* GENERAL SECTIONS */
+    /* SECTIONS */
 
     section{
-      padding:120px 0;
-    }
-
-    .section-header{
-      margin-bottom:70px;
+      padding:110px 0;
     }
 
     .section-title{
       font-size:58px;
-      margin-bottom:20px;
+      margin-bottom:22px;
       font-weight:800;
     }
 
     .section-text{
-      color:#cfd8d3;
-      max-width:760px;
+      color:#d3dcd7;
+      font-size:19px;
       line-height:1.9;
-      font-size:18px;
     }
 
     /* ABOUT */
+
+    .about{
+      background:white;
+      color:#08110d;
+    }
 
     .about-grid{
       display:grid;
@@ -202,28 +192,43 @@
       align-items:center;
     }
 
+    .about .subtitle{
+      color:#4d8f5e;
+    }
+
+    .about .section-text{
+      color:#2e3a34;
+    }
+
     .about-image img{
-      border-radius:28px;
-      box-shadow:0 20px 60px rgba(0,0,0,0.35);
+      border-radius:22px;
+      height:520px;
+      object-fit:cover;
+      box-shadow:0 20px 60px rgba(0,0,0,0.15);
     }
 
     /* SERVICES */
 
     .services{
-      background:#08130e;
+      background:
+      radial-gradient(circle at top left,
+      rgba(124,255,158,0.08),
+      transparent 30%),
+      #07110d;
     }
 
     .services-grid{
       display:grid;
       grid-template-columns:repeat(3,1fr);
       gap:30px;
+      margin-top:50px;
     }
 
     .service-card{
-      background:#0e1b15;
+      background:#0f1c16;
       border:1px solid rgba(255,255,255,0.06);
+      border-radius:24px;
       padding:40px;
-      border-radius:28px;
       transition:0.3s;
     }
 
@@ -233,15 +238,15 @@
     }
 
     .service-icon{
-      width:70px;
-      height:70px;
+      width:72px;
+      height:72px;
       border-radius:50%;
-      background:rgba(124,255,158,0.1);
+      background:rgba(124,255,158,0.08);
       display:flex;
       align-items:center;
       justify-content:center;
+      margin-bottom:24px;
       font-size:34px;
-      margin-bottom:25px;
       color:#7CFF9E;
     }
 
@@ -251,34 +256,44 @@
     }
 
     .service-card p{
-      color:#cfd8d3;
+      color:#d1dad5;
       line-height:1.8;
+      font-size:17px;
     }
 
     /* TEAM */
 
+    .team{
+      background:white;
+      color:#08110d;
+    }
+
+    .team .subtitle{
+      color:#4d8f5e;
+    }
+
     .team-grid{
       display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:35px;
+      grid-template-columns:1fr 1fr;
+      gap:30px;
+      margin-top:50px;
     }
 
     .team-card{
-      background:#0d1813;
-      border:1px solid rgba(255,255,255,0.05);
+      border:1px solid rgba(0,0,0,0.08);
       border-radius:24px;
       overflow:hidden;
       display:flex;
-      gap:25px;
-      padding:25px;
-      align-items:center;
+      background:white;
     }
 
     .team-card img{
-      width:220px;
-      height:220px;
+      width:42%;
       object-fit:cover;
-      border-radius:18px;
+    }
+
+    .team-info{
+      padding:35px;
     }
 
     .team-info h3{
@@ -286,83 +301,92 @@
       margin-bottom:10px;
     }
 
-    .team-role{
-      color:#7CFF9E;
-      margin-bottom:18px;
+    .role{
+      color:#5ca56d;
       font-weight:600;
+      margin-bottom:20px;
     }
 
     .team-info p{
-      color:#cfd8d3;
-      line-height:1.8;
+      color:#2c3a34;
+      line-height:1.9;
+      font-size:17px;
     }
 
     /* CONTACT */
 
     .contact{
-      background:#08130e;
-    }
-
-    .contact-box{
-      background:#0e1b15;
-      border-radius:30px;
-      padding:60px;
-      border:1px solid rgba(255,255,255,0.05);
+      background:
+      radial-gradient(circle at top right,
+      rgba(124,255,158,0.08),
+      transparent 30%),
+      #07110d;
     }
 
     .contact-grid{
       display:grid;
       grid-template-columns:repeat(4,1fr);
-      gap:30px;
-      margin-top:40px;
+      gap:25px;
+      margin-top:50px;
     }
 
-    .contact-item{
-      background:#122019;
-      padding:30px;
+    .contact-card{
+      background:#0f1c16;
+      border:1px solid rgba(255,255,255,0.05);
       border-radius:20px;
+      padding:30px;
       text-align:center;
     }
 
-    .contact-item h4{
+    .contact-icon{
+      font-size:36px;
+      margin-bottom:16px;
       color:#7CFF9E;
-      margin-bottom:10px;
     }
 
-    .contact-item p{
-      color:#d8e1dc;
+    .contact-card h4{
+      margin-bottom:10px;
+      font-size:22px;
+    }
+
+    .contact-card p{
+      color:#d6ddd9;
       line-height:1.7;
     }
 
     /* FOOTER */
 
     footer{
-      padding:45px 0;
+      background:#06100c;
+      padding:35px 0;
       border-top:1px solid rgba(255,255,255,0.05);
       text-align:center;
-      color:#93a39a;
+      color:#8ea39a;
       font-size:15px;
     }
 
-    /* RESPONSIVE */
+    /* MOBILE */
 
     @media(max-width:1100px){
 
+      .about-grid,
       .services-grid,
-      .contact-grid,
       .team-grid,
-      .about-grid{
+      .contact-grid{
         grid-template-columns:1fr;
       }
 
       .team-card{
         flex-direction:column;
-        text-align:center;
       }
 
       .team-card img{
         width:100%;
         height:320px;
+      }
+
+      .about-image img{
+        height:auto;
       }
 
     }
@@ -384,7 +408,7 @@
       }
 
       .hero h1{
-        font-size:52px;
+        font-size:54px;
       }
 
       .hero p{
@@ -395,13 +419,10 @@
         font-size:42px;
       }
 
-      .contact-box{
-        padding:35px;
-      }
-
     }
 
   </style>
+
 </head>
 
 <body>
@@ -413,14 +434,20 @@
   <div class="container navbar">
 
     <div class="logo">
-      GREEN INVESTMENTS
+      <span>GREEN</span> INVESTMENTS
     </div>
 
     <nav class="nav-links">
+
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#team">Team</a>
       <a href="#contact">Contact</a>
+
+      <a href="#contact" class="contact-btn">
+        Contact Us
+      </a>
+
     </nav>
 
   </div>
@@ -445,23 +472,14 @@
       </h1>
 
       <p>
-        Wir bieten strategisches Consulting im Bereich
-        Green Energy, Recycling und nachhaltige Investments.
-        Fokus auf langfristiges Wachstum, Innovation
-        und nachhaltigen Impact.
+        Wir bieten Consulting im Bereich Green Energy,
+        Recycling und nachhaltige Investments.
+        Fokus auf langfristiges Wachstum und Impact.
       </p>
 
-      <div class="hero-buttons">
-
-        <a href="#contact" class="btn-primary">
-          Kontakt aufnehmen
-        </a>
-
-        <a href="#services" class="btn-secondary">
-          Mehr erfahren
-        </a>
-
-      </div>
+      <a href="#contact" class="hero-btn">
+        Kontakt aufnehmen →
+      </a>
 
     </div>
 
@@ -471,19 +489,18 @@
 
 <!-- ABOUT -->
 
-<section id="about">
+<section class="about" id="about">
 
   <div class="container about-grid">
 
     <div>
 
       <div class="subtitle">
-        ABOUT GREEN INVESTMENTS
+        Über uns
       </div>
 
       <h2 class="section-title">
-        Nachhaltige Lösungen
-        für eine bessere Zukunft
+        Nachhaltige Lösungen für eine bessere Zukunft
       </h2>
 
       <p class="section-text">
@@ -497,7 +514,7 @@
     </div>
 
     <div class="about-image">
-      <img src="about.jpg" alt="Green Investments">
+      <img src="about.jpg" alt="About">
     </div>
 
   </div>
@@ -510,17 +527,13 @@
 
   <div class="container">
 
-    <div class="section-header">
-
-      <div class="subtitle">
-        SERVICES
-      </div>
-
-      <h2 class="section-title">
-        Unsere Leistungen
-      </h2>
-
+    <div class="subtitle">
+      Services
     </div>
+
+    <h2 class="section-title">
+      Unsere Leistungen
+    </h2>
 
     <div class="services-grid">
 
@@ -558,8 +571,7 @@
 
         <p>
           Entwicklung und Optimierung von
-          Kreislaufwirtschaftsmodellen für eine
-          nachhaltige Zukunft.
+          Kreislaufwirtschaftsmodellen für eine nachhaltige Zukunft.
         </p>
 
       </div>
@@ -572,21 +584,17 @@
 
 <!-- TEAM -->
 
-<section id="team">
+<section class="team" id="team">
 
   <div class="container">
 
-    <div class="section-header">
-
-      <div class="subtitle">
-        TEAM
-      </div>
-
-      <h2 class="section-title">
-        Unser Team
-      </h2>
-
+    <div class="subtitle">
+      Team
     </div>
+
+    <h2 class="section-title">
+      Unser Team
+    </h2>
 
     <div class="team-grid">
 
@@ -598,14 +606,13 @@
 
           <h3>Ferdinand Vogt</h3>
 
-          <div class="team-role">
+          <div class="role">
             Partner & Consultant
           </div>
 
           <p>
-            Erfahren in nachhaltigen Investitionen
-            und strategischer Beratung im Bereich
-            erneuerbare Energien und Recycling.
+            Erfahren in nachhaltigen Investitionen und strategischer
+            Beratung im Bereich erneuerbare Energien und Recycling.
           </p>
 
         </div>
@@ -620,14 +627,13 @@
 
           <h3>Dominik Metzger</h3>
 
-          <div class="team-role">
+          <div class="role">
             Partner & Consultant
           </div>
 
           <p>
-            Spezialist für Green Energy,
-            Kreislaufwirtschaft und nachhaltige
-            Geschäftsmodelle.
+            Spezialist für Green Energy, Kreislaufwirtschaft
+            und nachhaltige Geschäftsmodelle.
           </p>
 
         </div>
@@ -646,42 +652,61 @@
 
   <div class="container">
 
-    <div class="contact-box">
+    <div class="subtitle">
+      Kontakt
+    </div>
 
-      <div class="subtitle">
-        KONTAKT
+    <h2 class="section-title">
+      Kontakt
+    </h2>
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+
+        <div class="contact-icon">✉</div>
+
+        <h4>E-Mail</h4>
+
+        <p>
+          contact@green-investments.com
+        </p>
+
       </div>
 
-      <h2 class="section-title">
-        Lassen Sie uns sprechen
-      </h2>
+      <div class="contact-card">
 
-      <p class="section-text">
-        Wir freuen uns auf neue Partnerschaften,
-        Projekte und nachhaltige Investmentideen.
-      </p>
+        <div class="contact-icon">☎</div>
 
-      <div class="contact-grid">
+        <h4>Telefon</h4>
 
-        <div class="contact-item">
-          <h4>E-Mail</h4>
-          <p>contact@green-investments.com</p>
-        </div>
+        <p>
+          +49 123 456789
+        </p>
 
-        <div class="contact-item">
-          <h4>Telefon</h4>
-          <p>+49 123 456789</p>
-        </div>
+      </div>
 
-        <div class="contact-item">
-          <h4>Standort</h4>
-          <p>Deutschland</p>
-        </div>
+      <div class="contact-card">
 
-        <div class="contact-item">
-          <h4>Website</h4>
-          <p>www.green-investments.com</p>
-        </div>
+        <div class="contact-icon">⌂</div>
+
+        <h4>Standort</h4>
+
+        <p>
+          Deutschland
+        </p>
+
+      </div>
+
+      <div class="contact-card">
+
+        <div class="contact-icon">⌘</div>
+
+        <h4>Website</h4>
+
+        <p>
+          www.green-investments.com
+        </p>
 
       </div>
 
