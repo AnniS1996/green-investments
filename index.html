@@ -253,6 +253,7 @@
       font-size:17px;
     }
 
+    
     /* TEAM */
 
     #team{
@@ -351,6 +352,52 @@
       font-size:28px;
     }
 
+     /* IMPRESSUM */
+
+    #impressum{
+      background:#07110c;
+      color:white;
+    }
+
+    #impressum .section-title,
+    #contact h4{
+      color:white;
+    }
+
+    #impressum p{
+      color:#d2dad5;
+    }
+
+    .impressum-card{
+      margin-top:50px;
+      background:linear-gradient(180deg,#0f1d16,#0a1410);
+      border:1px solid rgba(125,255,139,0.1);
+      border-radius:28px;
+      padding:45px;
+      display:grid;
+      grid-template-columns:repeat(1,1fr);
+      gap:25px;
+    }
+
+    .impressum-item{
+      display:flex;
+      align-items:center;
+      gap:18px;
+    }
+
+    .impressum-icon{
+      width:64px;
+      height:64px;
+      border-radius:50%;
+      background:rgba(125,255,139,0.08);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#7DFF8B;
+      font-size:28px;
+    }
+
+
     footer{
       padding:40px 0;
       text-align:center;
@@ -364,6 +411,7 @@
     @media(max-width:1100px){
 
       .services-grid,
+      .impressum-grid,
       .team-grid,
       .about-grid,
       .contact-card{
@@ -429,6 +477,7 @@
       <a href="#services">Services</a>
       <a href="#team">Team</a>
       <a href="#contact">Contact</a>
+      <a href="#contact">Impressum</a>
     </nav>
 
   </div>
@@ -645,12 +694,20 @@
 
 </section>
 
+<section id="impressum">
 
+  <div class="container">
 
-<footer>
-  © 2026 M&V Green Engineering and Capital Investment GmbH. All rights reserved.<br>
-  <h4>IMPRESSUM</h4>
-  Angaben gemäß § 5 DDG<br>
+    <div class="section-label">
+      Impressum
+    </div>
+
+    <h2 class="section-title">
+      Impressum
+    </h2>
+
+    <div class="impressum-card">
+    Angaben gemäß § 5 DDG<br>
   M&V Green Engineering and Capital Investment GmbH<br>
   Gruselsberg 7<br>
   94579 Zenting, Deutschland<br>
@@ -658,6 +715,16 @@
   Handelsregister: Amtsgericht Passau, HRB 13207<br>
   Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: DE461697704 <br>
   Verbraucherstreitbeilegung: Wir sind weder bereit noch verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2026 M&V Green Engineering and Capital Investment GmbH. All rights reserved.<br>
 </footer>
 
 </body>
